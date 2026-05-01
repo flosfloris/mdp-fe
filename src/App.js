@@ -54,8 +54,8 @@ function App() {
           <Route path="/cerca" element={<SearchPage />} />
           <Route path="/servizio/:id" element={<DettaglioServizio />} />
           <Route path="/provider/:id" element={<ProfiloProvider />} />
-          <Route path="/accedi" element={<SignInPage />} />
-          <Route path="/registrazione" element={<SignUpPage />} />
+          <Route path="/accedi/*" element={<SignInPage />} />
+          <Route path="/registrazione/*" element={<SignUpPage />} />
 
           {/* Protected Routes */}
           <Route

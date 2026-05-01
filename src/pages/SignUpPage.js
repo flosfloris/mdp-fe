@@ -146,7 +146,7 @@ function SignUpPage() {
           {!isSignedIn ? (
             <>
               <SignUp
-                afterSignUpUrl="/registrazione"
+                fallbackRedirectUrl="/registrazione"
                 signInUrl="/accedi"
                 routing="path"
                 path="/registrazione"
