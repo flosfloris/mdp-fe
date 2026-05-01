@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, MapPin, Users, Zap, ArrowRight, Cake } from 'lucide-react';
+import { MapPin, Zap, ArrowRight, Search } from 'lucide-react';
 import './Home.css';
 
 function Home() {
@@ -9,95 +9,142 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">
-            Trova la location o l'animazione perfetta per la festa del tuo bambino
-          </h1>
-          <p className="hero-subtitle">
-            Scopri i migliori provider di location e animazione in tutta Italia. Organizza feste indimenticabili!
-          </p>
-          <div className="hero-cta">
-            <Link to="/cerca?tipo=location" className="btn btn-primary">
-              <MapPin size={20} />
-              Cerca Location
-            </Link>
-            <Link to="/cerca?tipo=animazione" className="btn btn-secondary">
-              <Zap size={20} />
-              Cerca Animazione
-            </Link>
+          <h1 className="hero-title">Trova la festa perfetta per i tuoi bambini</h1>
+          <div className="hero-search">
+            <div className="search-input-wrapper">
+              <Search size={20} />
+              <input
+                type="text"
+                placeholder="Cerca location o animatori..."
+                className="search-input"
+              />
+            </div>
           </div>
         </div>
         <div className="hero-image">
-          <div className="hero-illustration">
-            <Cake size={120} color="#FF6B9D" />
-          </div>
+          <div className="hero-placeholder">🎉</div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="how-it-works">
+      {/* Come Funziona Section */}
+      <section className="come-funziona">
         <div className="section-container">
-          <h2 className="section-title">Come Funziona</h2>
-          <div className="steps">
-            <div className="step">
-              <div className="step-number">1</div>
-              <h3>Cerca</h3>
-              <p>Visualizza i migliori provider di location e animazione nella tua città.</p>
+          <h2 className="section-title">Come funziona?</h2>
+          <div className="icons-row">
+            <div className="icon-card">
+              <div className="icon-circle location">
+                <MapPin size={32} />
+              </div>
+              <h4>Location</h4>
             </div>
-            <div className="step-arrow">
-              <ArrowRight size={24} />
+            <div className="icon-card">
+              <div className="icon-circle animation">
+                <Zap size={32} />
+              </div>
+              <h4>Animazione</h4>
             </div>
-            <div className="step">
-              <div className="step-number">2</div>
-              <h3>Confronta</h3>
-              <p>Leggi le recensioni, guarda le foto e confronta i prezzi.</p>
+            <div className="icon-card">
+              <div className="icon-circle catering">
+                <span>🍰</span>
+              </div>
+              <h4>Catering</h4>
             </div>
-            <div className="step-arrow">
-              <ArrowRight size={24} />
-            </div>
-            <div className="step">
-              <div className="step-number">3</div>
-              <h3>Contatta</h3>
-              <p>Invia un messaggio diretto e prenota la festa perfetta.</p>
+            <div className="icon-card">
+              <div className="icon-circle decoration">
+                <span>🎈</span>
+              </div>
+              <h4>Decorazioni</h4>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Categories */}
-      <section className="featured-categories">
+      {/* Le migliori location */}
+      <section className="best-locations">
         <div className="section-container">
-          <h2 className="section-title">Categorie Principali</h2>
-          <div className="categories-grid">
-            <Link to="/cerca?tipo=location" className="category-card">
-              <div className="category-icon location">
-                <MapPin size={40} />
+          <h2 className="section-title">Le migliori location</h2>
+          <div className="cards-grid">
+            <Link to="/cerca?tipo=location" className="venue-card">
+              <div className="venue-image">
+                <div className="placeholder-img">📍</div>
               </div>
-              <h3>Location per Feste</h3>
-              <p>Sale, parchi, fattorie e spazi innovativi per celebrare il compleanno</p>
-              <span className="explore-link">Esplora <ArrowRight size={16} /></span>
+              <div className="venue-info">
+                <h3>Villa Elegante</h3>
+                <p>Roma</p>
+              </div>
             </Link>
-
-            <Link to="/cerca?tipo=animazione" className="category-card">
-              <div className="category-icon animation">
-                <Zap size={40} />
+            <Link to="/cerca?tipo=location" className="venue-card">
+              <div className="venue-image">
+                <div className="placeholder-img">🏢</div>
               </div>
-              <h3>Animatori Professionisti</h3>
-              <p>Maghi, giocolieri, intrattenitori e artisti per animare la festa</p>
-              <span className="explore-link">Esplora <ArrowRight size={16} /></span>
+              <div className="venue-info">
+                <h3>Spazio Creativo</h3>
+                <p>Milano</p>
+              </div>
+            </Link>
+            <Link to="/cerca?tipo=location" className="venue-card">
+              <div className="venue-image">
+                <div className="placeholder-img">🎪</div>
+              </div>
+              <div className="venue-info">
+                <h3>Parco Divertimenti</h3>
+                <p>Napoli</p>
+              </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Provider CTA */}
-      <section className="provider-cta">
-        <div className="cta-content">
-          <h2>Sei un organizzatore di feste?</h2>
-          <p>Unisciti alla community di FestaDeiPiccoli e raggiungi migliaia di genitori alla ricerca dei tuoi servizi!</p>
-          <Link to="/registrazione" className="btn btn-large">
-            Diventa Provider
-            <ArrowRight size={20} />
-          </Link>
+      {/* I migliori animatori */}
+      <section className="best-animators">
+        <div className="section-container">
+          <h2 className="section-title">I migliori animatori</h2>
+          <div className="cards-grid">
+            <Link to="/cerca?tipo=animazione" className="animator-card">
+              <div className="animator-image">
+                <div className="placeholder-img">🎭</div>
+              </div>
+              <div className="animator-info">
+                <h3>Maghi & Magia</h3>
+                <p>Spettacoli interattivi</p>
+              </div>
+            </Link>
+            <Link to="/cerca?tipo=animazione" className="animator-card">
+              <div className="animator-image">
+                <div className="placeholder-img">🤹</div>
+              </div>
+              <div className="animator-info">
+                <h3>Giocolieri Professionisti</h3>
+                <p>Acrobazie e divertimento</p>
+              </div>
+            </Link>
+            <Link to="/cerca?tipo=animazione" className="animator-card">
+              <div className="animator-image">
+                <div className="placeholder-img">🎪</div>
+              </div>
+              <div className="animator-info">
+                <h3>Intrattenitori Vari</h3>
+                <p>Musica e danza</p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional CTA Banner */}
+      <section className="professional-cta">
+        <div className="cta-wrapper">
+          <div className="cta-text">
+            <h2>Sei un professionista? Unisciti a noi!</h2>
+            <p>Raggiungi migliaia di genitori alla ricerca dei tuoi servizi</p>
+            <Link to="/registrazione" className="btn btn-cta">
+              Diventa Provider
+              <ArrowRight size={20} />
+            </Link>
+          </div>
+          <div className="cta-image">
+            <div className="placeholder-img-large">👨‍💼</div>
+          </div>
         </div>
       </section>
 
@@ -107,19 +154,19 @@ function Home() {
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">500+</div>
-              <p>Location e Animatori</p>
+              <p>Provider</p>
             </div>
             <div className="stat-card">
-              <div className="stat-number">10000+</div>
+              <div className="stat-number">10K+</div>
               <p>Feste Organizzate</p>
             </div>
             <div className="stat-card">
-              <div className="stat-number">50000+</div>
+              <div className="stat-number">50K+</div>
               <p>Bambini Felici</p>
             </div>
             <div className="stat-card">
               <div className="stat-number">20+</div>
-              <p>Regioni Coperte</p>
+              <p>Regioni</p>
             </div>
           </div>
         </div>

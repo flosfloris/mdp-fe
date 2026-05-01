@@ -1,6 +1,6 @@
 .search-page {
   min-height: calc(100vh - 200px);
-  background: #fafafa;
+  background: white;
   padding: 2rem 0;
 }
 
@@ -15,11 +15,11 @@
 
 .filter-toggle-btn {
   display: none;
-  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFB3B3 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: 700;
   cursor: pointer;
   align-items: center;
@@ -32,7 +32,7 @@
   background: white;
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   height: fit-content;
   position: sticky;
   top: 100px;
@@ -49,6 +49,7 @@
   font-size: 1.2rem;
   color: #2c3e50;
   margin: 0;
+  font-weight: 700;
 }
 
 .close-filters {
@@ -96,7 +97,7 @@
   padding: 0.6rem 0.8rem;
   border: 2px solid #ecf0f1;
   background: white;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   font-size: 0.9rem;
@@ -105,8 +106,8 @@
 }
 
 .tipo-tab.active {
-  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
-  border-color: #FF6B9D;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFB3B3 100%);
+  border-color: #FF6B6B;
   color: white;
 }
 
@@ -116,7 +117,7 @@
   width: 100%;
   padding: 0.6rem 0.8rem;
   border: 2px solid #ecf0f1;
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: 'Nunito', sans-serif;
   font-size: 0.9rem;
   transition: all 0.2s ease;
@@ -125,8 +126,8 @@
 .filter-group select:focus,
 .filter-group input:focus {
   outline: none;
-  border-color: #FF6B9D;
-  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+  border-color: #FF6B6B;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
 }
 
 .price-inputs,
@@ -151,7 +152,7 @@
 .price-slider {
   width: 100%;
   cursor: pointer;
-  accent-color: #FF6B9D;
+  accent-color: #FF6B6B;
 }
 
 .radio-group,
@@ -175,7 +176,7 @@
 .radio-group input[type="radio"],
 .checkbox-group input[type="checkbox"] {
   cursor: pointer;
-  accent-color: #FF6B9D;
+  accent-color: #FF6B6B;
 }
 
 /* Search Results */
@@ -215,7 +216,7 @@
 .sort-control select {
   padding: 0.6rem 0.8rem;
   border: 2px solid #ecf0f1;
-  border-radius: 6px;
+  border-radius: 8px;
   background: white;
   font-family: 'Nunito', sans-serif;
   font-size: 0.9rem;
@@ -241,8 +242,8 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 4px solid rgba(255, 107, 157, 0.2);
-  border-top-color: #FF6B9D;
+  border: 4px solid rgba(255, 107, 107, 0.2);
+  border-top-color: #FF6B6B;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -293,16 +294,16 @@
   padding: 0.6rem 1.2rem;
   border: 2px solid #ecf0f1;
   background: white;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
 }
 
 .pagination button:hover:not(:disabled) {
-  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFB3B3 100%);
   color: white;
-  border-color: #FF6B9D;
+  border-color: #FF6B6B;
 }
 
 .pagination button:disabled {
