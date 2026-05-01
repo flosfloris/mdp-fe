@@ -19,17 +19,23 @@ function ProviderDashboard() {
   useEffect(() => {
     const loadDashboard = async () => {
       try {
-        // Load stats
-        const statsRes = await api.get('/provider/stats');
-        setStats(statsRes.data);
-
         // Load services
-        const serviziRes = await api.get('/provider/servizi');
-        setServizi(serviziRes.data);
+        const serviziRes = await api.get('/servizi/provider/miei');
+        const serviziData = serviziRes.data.servizi || serviziRes.data || [];
+        setServizi(serviziData);
 
         // Load recent messages
-        const messaggiRes = await api.get('/provider/messaggi?limit=5');
-        setMessaggi(messaggiRes.data);
+        const messaggiRes = await api.get('/messaggi');
+        const messaggiData = messaggiRes.data.messaggi || messaggiRes.data || [];
+        setMessaggi(messaggiData.slice(0, 5));
+
+        // Calculate stats from loaded data
+        const nonLetti = messaggiData.filter(m => !m.letto).length;
+        setStats({
+          totalServizi: serviziData.length,
+          totalMessaggi: messaggiData.length,
+          messaggiNonLetti: nonLetti,
+        });
       } catch (err) {
         setError('Errore nel caricamento del dashboard');
         console.error('Error loading dashboard:', err);
