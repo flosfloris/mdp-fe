@@ -10,6 +10,7 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">Trova la festa perfetta per i tuoi bambini</h1>
+          <p className="hero-subtitle">Divertimento assicurato!</p>
           <div className="hero-search">
             <div className="search-input-wrapper">
               <Search size={20} />

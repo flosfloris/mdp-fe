@@ -1,7 +1,8 @@
 .navbar {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FFB3B3 100%);
+  background: var(--white);
   padding: 1rem 0;
-  box-shadow: 0 4px 16px rgba(255, 107, 107, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-bottom: 1px solid var(--surface-variant);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -19,14 +20,17 @@
 .navbar-logo {
   text-decoration: none;
   margin-right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo-text {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.8rem;
-  color: white;
-  font-weight: 900;
-  letter-spacing: 0.5px;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--primary);
+  font-weight: var(--fw-bold);
+  letter-spacing: normal;
 }
 
 .nav-menu {
@@ -42,9 +46,9 @@
 }
 
 .nav-link {
-  color: white;
+  color: var(--on-surface);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--fw-semi);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
@@ -55,13 +59,13 @@
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  color: var(--primary);
+  background-color: var(--primary-fixed);
 }
 
 .badge-unread {
-  background-color: #FFE66D;
-  color: #FF6B6B;
+  background-color: var(--primary-container);
+  color: var(--white);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -69,7 +73,7 @@
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   margin-left: 0.5rem;
 }
 
@@ -80,21 +84,21 @@
 }
 
 .btn-register {
-  background-color: white;
-  color: #FF6B6B;
+  background-color: var(--primary-container);
+  color: var(--white);
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  font-weight: 700;
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: var(--fw-bold);
   cursor: pointer;
   font-size: 0.9rem;
   transition: all 0.2s ease;
 }
 
 .btn-register:hover {
-  background-color: #FFF8FA;
+  background-color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  box-shadow: 0 6px 16px rgba(181, 39, 10, 0.2);
 }
 
 .user-dropdown {
@@ -107,17 +111,18 @@
   padding: 0;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border-radius: 50%;
 }
 
 .btn-avatar:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .avatar-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid white;
+  border: 2px solid var(--primary);
   object-fit: cover;
 }
 
@@ -125,12 +130,13 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background: white;
+  background: var(--white);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   min-width: 180px;
   margin-top: 0.5rem;
   overflow: hidden;
+  border: 1px solid var(--surface-variant);
 }
 
 .dropdown-item {
@@ -138,7 +144,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1.25rem;
-  color: #333;
+  color: var(--on-surface);
   text-decoration: none;
   font-size: 0.95rem;
   background: none;
@@ -150,49 +156,49 @@
 }
 
 .dropdown-item:hover {
-  background-color: #f5f5f5;
-  color: #FF6B6B;
+  background-color: var(--primary-fixed);
+  color: var(--primary);
 }
 
 .dropdown-divider {
   height: 1px;
-  background-color: #eee;
+  background-color: var(--surface-variant);
   margin: 0.5rem 0;
 }
 
 .logout-btn {
-  color: #ff4757;
+  color: var(--error);
 }
 
 .logout-btn:hover {
-  background-color: #ffe0e6;
-  color: #ff4757;
+  background-color: rgba(186, 26, 26, 0.08);
+  color: var(--error);
 }
 
 .hamburger {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: var(--on-surface);
   cursor: pointer;
   padding: 0.5rem;
 }
 
 .mobile-menu {
   display: none;
-  background-color: rgba(255, 107, 107, 0.95);
+  background-color: var(--surface);
   padding: 1rem 1.5rem;
   flex-direction: column;
   gap: 0.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid var(--surface-variant);
 }
 
 .mobile-menu-link {
-  color: white;
+  color: var(--on-surface);
   text-decoration: none;
   padding: 0.75rem 1rem;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: var(--fw-semi);
   font-size: 0.95rem;
   display: flex;
   align-items: center;
@@ -206,23 +212,30 @@
 }
 
 .mobile-menu-link:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--primary-fixed);
+  color: var(--primary);
   padding-left: 1.5rem;
 }
 
 .mobile-menu-link.logout {
-  color: #FFE66D;
+  color: var(--error);
+}
+
+.mobile-menu-link.logout:hover {
+  background-color: rgba(186, 26, 26, 0.08);
+  color: var(--error);
 }
 
 .mobile-menu-link.register {
-  background-color: white;
-  color: #FF6B6B;
+  background-color: var(--primary-container);
+  color: var(--white);
   margin-top: 0.5rem;
   justify-content: center;
 }
 
 .mobile-menu-link.register:hover {
-  background-color: #FFF8FA;
+  background-color: var(--primary);
+  padding-left: 1rem;
 }
 
 /* Responsive Design */
@@ -244,7 +257,7 @@
   }
 
   .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 
   .btn-register {
@@ -258,6 +271,6 @@
   }
 
   .logo-text {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 }

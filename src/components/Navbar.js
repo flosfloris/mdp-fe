@@ -23,19 +23,20 @@ function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
+          <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>celebration</span>
           <span className="logo-text">FestaDeiPiccoli</span>
         </Link>
 
         {/* Desktop Menu */}
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/cerca?tipo=location" className="nav-link">
-              Cerca Location
+            <Link to="/" className="nav-link">
+              Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/cerca?tipo=animazione" className="nav-link">
-              Cerca Animazione
+            <Link to="/cerca?tipo=location" className="nav-link">
+              Esplora
             </Link>
           </li>
 
@@ -66,7 +67,7 @@ function Navbar() {
               className="btn-register"
               onClick={() => navigate('/registrazione')}
             >
-              Sei un provider? Registrati
+              Accedi
             </button>
           ) : (
             <div className="user-dropdown">
@@ -124,20 +125,20 @@ function Navbar() {
       {menuOpen && (
         <div className="mobile-menu">
           <Link
+            to="/"
+            className="mobile-menu-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Home size={18} />
+            Home
+          </Link>
+          <Link
             to="/cerca?tipo=location"
             className="mobile-menu-link"
             onClick={() => setMenuOpen(false)}
           >
             <Search size={18} />
-            Cerca Location
-          </Link>
-          <Link
-            to="/cerca?tipo=animazione"
-            className="mobile-menu-link"
-            onClick={() => setMenuOpen(false)}
-          >
-            <Search size={18} />
-            Cerca Animazione
+            Esplora
           </Link>
 
           {isSignedIn && (
@@ -179,7 +180,7 @@ function Navbar() {
                 setMenuOpen(false);
               }}
             >
-              Registrati come Provider
+              Accedi
             </button>
           )}
         </div>
