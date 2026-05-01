@@ -1,0 +1,212 @@
+.sign-up-page {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 450px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.auth-card h1 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0 0 0.5rem 0;
+  font-weight: 800;
+  text-align: center;
+}
+
+.auth-card p {
+  color: #7f8c8d;
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+/* Profile Form */
+.profile-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem 1rem;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #FF6B9D;
+  box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #dc3545;
+  font-size: 0.9rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 157, 0.4);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-success {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #FF6B9D;
+  margin-bottom: 1rem;
+}
+
+.signup-success p {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Clerk Sign Up Styles */
+.cl-root {
+  --cl-primary-button-bg: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+}
+
+.cl-formButtonPrimary {
+  background: linear-gradient(135deg, #FF6B9D 0%, #FF8FB5 100%);
+  border: none;
+  width: 100%;
+}
+
+.cl-formButtonPrimary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 157, 0.4);
+}
+
+.cl-divider {
+  background-color: #ecf0f1;
+}
+
+.cl-socialButtonsBlockButton {
+  border: 2px solid #ecf0f1;
+  color: #2c3e50;
+}
+
+.cl-socialButtonsBlockButton:hover {
+  background-color: #f8f9fa;
+  border-color: #FF6B9D;
+}
+
+.auth-footer {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ecf0f1;
+  text-align: center;
+}
+
+.auth-footer p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.auth-footer a {
+  color: #FF6B9D;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .sign-up-page {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+  }
+
+  .auth-card h1 {
+    font-size: 1.4rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+}
